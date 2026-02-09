@@ -1,0 +1,1988 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WAPREX | Čištění – impregnace – údržba exteriérů</title>
+  <meta name="description" content="WAPREX – profesionální čištění, impregnace a údržba exteriérů. Střešní krytiny, fasády, dlažby a další." />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#288d42;
+      --bg1:#13240c;
+      --bg2:#2db421e8;
+      --text:#D0C7BD;
+      --muted:#D0C7BD;
+      --card:#4A5240;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --shadow2: 0 10px 30px rgba(0,255,65,.12);
+      --radius: 18px;
+      --radius2: 22px;
+      --max: 1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 20% -20%, rgba(0, 255, 64, 0.925), transparent 35%),
+                  radial-gradient(900px 600px at 120% 10%, rgba(0,255,65,.18), transparent 65%),
+                  linear-gradient(180deg, var(--bg2), var(--bg1));
+      overflow-x:hidden;
+        box-shadow: inset 0 0 110px rgba(0, 0, 0, 0.726);
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    .container{width:min(var(--max), 92vw); margin-inline:auto}
+    .pill{
+      display:inline-flex; align-items:center; gap:.55rem;
+      padding:.55rem .8rem;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      backdrop-filter: blur(8px);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      padding:.95rem 1.15rem;
+      border-radius: 14px;
+      border: 1px solid rgba(65,186,67,.25);
+      background: linear-gradient(180deg, rgba(65,186,67,.95), rgb(65, 186, 67));
+      color:#07130b;
+      font-weight:800;
+      box-shadow: var(--shadow2);
+      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-2px); filter:saturate(1.05); box-shadow: 0 16px 40px rgba(65,186,67,.18);}
+    .btn:active{transform: translateY(0px) scale(.99);}
+    .btn.secondary{
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow:none;
+      font-weight:700;
+    }
+    .btn.secondary:hover{box-shadow: 0 14px 34px rgba(0,0,0,.28);}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(0,0,0,.85);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(12px);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: .5rem 0;
+      gap: 1rem;
+    }
+    .brand{
+      display:flex; flex-direction:column; line-height:1.05;
+      min-width: 160px;
+      gap: .5rem;
+      align-items: center;
+    }
+    .brand-img{
+      max-height: 150px;
+      width: auto;
+    }
+    .brand .logo{
+      font-weight: 900;
+      letter-spacing: .6px;
+      font-size: 1.35rem;
+      color: var(--green);
+    }
+    .brand .tag{
+      font-size: .72rem;
+      letter-spacing: .22em;
+      color: rgba(255,255,255,.55);
+      margin-top: .18rem;
+    }
+
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:none;
+      gap: .6rem;
+      align-items:center;
+    }
+    nav a{
+      display:inline-flex;
+      padding: .55rem .8rem;
+      border-radius: 12px;
+      color: rgba(255,255,255,.85);
+      font-weight: 700;
+      font-size: .92rem;
+      border:1px solid transparent;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    nav a:hover{
+      background: rgba(65,186,67,.08);
+      border-color: rgba(65,186,67,.25);
+      transform: translateY(-1px);
+    }
+    .nav-actions{
+      display:flex; align-items:center; gap:.55rem;
+    }
+
+    .hamburger{
+      width:44px; height:44px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      display:inline-grid; place-items:center;
+      cursor:pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .hamburger:hover{transform: translateY(-1px); background: rgba(255,255,255,.09);}
+    .hamburger span{
+      width:18px; height:2px; background: rgba(255,255,255,.88);
+      display:block; position:relative;
+    }
+    .hamburger span::before,
+    .hamburger span::after{
+      content:""; position:absolute; left:0;
+      width:18px; height:2px; background: rgba(255,255,255,.88);
+      transition: transform .18s ease, top .18s ease, opacity .18s ease;
+    }
+    .hamburger span::before{top:-6px}
+    .hamburger span::after{top:6px}
+    .hamburger.active span{background: transparent}
+    .hamburger.active span::before{top:0; transform: rotate(45deg)}
+    .hamburger.active span::after{top:0; transform: rotate(-45deg)}
+
+    /* Mobile menu panel */
+    .mobile-panel{
+      display:none;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(16,16,16,.75);
+      backdrop-filter: blur(12px);
+    }
+    .mobile-panel.open{display:block}
+    .mobile-panel .container{padding: .8rem 0 1.05rem}
+    .mobile-panel a{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: .85rem .85rem;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      margin-top:.55rem;
+      font-weight:800;
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height: 76vh;
+      display:grid;
+      align-items:center;
+      overflow:hidden;
+      isolation:isolate;
+      background:
+        radial-gradient(900px 500px at 10% 30%, rgba(68,201,67,.18), transparent 60%),
+        radial-gradient(600px 450px at 90% 20%, rgba(68,201,67,.10), transparent 55%),
+        linear-gradient(135deg, #3C442E, #211D11);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-5%;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.06), transparent 40%),
+        url("https://images.unsplash.com/photo-1523419409543-a5e549c1faa3?auto=format&fit=crop&w=2200&q=70");
+      background-size: cover;
+      background-position: center;
+      opacity: .16;
+      transform: translateY(var(--parallax, 0px)) scale(1.03);
+      will-change: transform;
+      z-index:-2;
+      filter: contrast(1.05) saturate(.9);
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.75));
+      z-index:-1;
+    }
+    .hero-inner{
+      padding: 4.2rem 0 3.2rem;
+      display:grid;
+      gap: 1.35rem;
+    }
+    .hero h1{
+      margin:0;
+      font-size: clamp(1.65rem, 4.2vw, 3.05rem);
+      line-height:1.08;
+      letter-spacing: .02em;
+      font-weight: 900;
+    }
+    .hero .outline{
+      display:block;
+      font-size: clamp(1.8rem, 5.2vw, 3.45rem);
+      font-weight: 900;
+      letter-spacing:.08em;
+      margin-top:.35rem;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(65,186,67,.95);
+      text-shadow: 0 16px 42px rgba(65,186,67,.10);
+    }
+    .hero p{
+      margin: .2rem 0 0;
+      max-width: 62ch;
+      color: rgba(255,255,255,.82);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .hero-actions{
+      display:flex; flex-wrap:wrap; gap:.7rem;
+      margin-top: .7rem;
+    }
+
+    /* Stats */
+    .stats{
+      margin-top: 1.2rem;
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:.75rem;
+      max-width: 720px;
+    }
+    .stat{
+      padding: .9rem 1rem;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 18px 45px rgba(0,0,0,.22);
+    }
+    .stat .num{
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: .02em;
+    }
+    .stat .lbl{
+      margin-top:.1rem;
+      color: rgba(255,255,255,.75);
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    /* Sections */
+    section{padding: 4.2rem 0}
+    .section-head{
+      display:flex; flex-direction:column; gap:.55rem;
+      margin-bottom: 1.35rem;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: clamp(1.35rem, 3.2vw, 2.15rem);
+      letter-spacing:.02em;
+      font-weight: 900;
+    }
+    .section-head p{
+      margin:0;
+      color: rgba(255,255,255,.75);
+      max-width: 70ch;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .grid-3{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .card{
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(65,186,67,.35);
+      background: rgba(255,255,255,.065);
+      box-shadow: 0 22px 55px rgba(0,0,0,.45);
+    }
+    .card .content{padding: 1.1rem 1.1rem 1.05rem}
+    .card h3{
+      margin:0 0 .5rem;
+      font-weight: 900;
+      letter-spacing:.03em;
+    }
+    .bullets{
+      margin:.7rem 0 0;
+      padding:0;
+      list-style:none;
+      color: rgba(255,255,255,.78);
+      font-weight: 600;
+    }
+    .bullets li{
+      margin: .5rem 0;
+      display:flex; gap:.55rem; align-items:flex-start;
+      line-height:1.5;
+    }
+    .check{
+      width: 18px; height:18px; border-radius: 6px;
+      background: rgba(55, 221, 58, 0.527);
+      border: 1px solid rgba(30, 245, 34, 0.781);
+      display:inline-grid; place-items:center;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+    .check svg{width: 12px; height:12px; fill: var(--green)}
+    .media{
+      height: 210px;
+      background: #111;
+      position:relative;
+      overflow:hidden;
+    }
+    .media img{
+      width:100%; height:100%;
+      object-fit: cover;
+      transform: scale(1.03);
+      transition: transform .35s ease;
+      filter: contrast(1.02) saturate(1.02);
+    }
+    .card:hover .media img{transform: scale(1.08)}
+    .badge{
+      position:absolute; left:14px; top:14px;
+      padding: .45rem .7rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.12);
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing:.02em;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Before/After */
+    .ba-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .ba{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+    }
+    .ba-top{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: .95rem 1.05rem;
+      gap: .8rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .ba-top .title{
+      font-weight: 900;
+      letter-spacing:.02em;
+    }
+    .ba-top .hint{
+      color: rgba(255,255,255,.70);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .carousel{
+      position:relative;
+      height: 240px;
+      overflow: hidden;
+      background:#0d0d0d;
+    }
+    .carousel-inner{
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .slide{
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img{
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+    .slide .label{
+      position:absolute; bottom:12px; left:14px; right:14px;
+      text-align:center;
+      font-weight: 900;
+      letter-spacing:.08em;
+      font-size:.78rem;
+      color: rgba(255,255,255,.85);
+      text-shadow: 0 10px 18px rgba(0,0,0,.45);
+    }
+    .carousel .prev, .carousel .next{
+      position:absolute; top:50%; transform: translateY(-50%);
+      width: 40px; height: 40px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.55);
+      border: 1px solid rgba(65,186,67,.55);
+      display:grid; place-items:center;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      color: var(--green);
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .carousel .prev{ left: 10px; }
+    .carousel .next{ right: 10px; }
+
+    .water-note{
+      margin-top: 1.2rem;
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius2);
+      background: rgba(65,186,67,.08);
+      border: 1px solid rgba(65,186,67,.22);
+      display:flex; gap:.9rem; align-items:center;
+    }
+    .water-note .drop{
+      width: 44px; height:44px; border-radius: 16px;
+      display:grid; place-items:center;
+      background: rgba(65,186,67,.14);
+      border: 1px solid rgba(65,186,67,.28);
+      flex: 0 0 auto;
+    }
+    .water-note .drop svg{width: 22px; height:22px; fill: var(--green)}
+    .water-note strong{letter-spacing:.02em}
+    .water-note span{color: rgba(255,255,255,.78); font-weight: 650}
+
+    /* Other services */
+    .icon-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:.85rem;
+      margin-top: 1rem;
+    }
+    .icon-card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 16px 40px rgba(0,0,0,.25);
+      padding: .9rem .95rem;
+      display:flex; gap:.75rem; align-items:flex-start;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .icon-card:hover{transform: translateY(-3px); border-color: rgba(65,186,67,.28);}
+    .icon{
+      width: 42px; height:42px; border-radius: 16px;
+      display:grid; place-items:center;
+      background: rgba(65,186,67,.12);
+      border: 1px solid rgba(65,186,67,.25);
+      flex:0 0 auto;
+    }
+    .icon svg{width: 20px; height:20px; fill: var(--green)}
+    .icon-card .t{font-weight: 900}
+    .icon-card .d{color: rgba(255,255,255,.72); font-weight: 650; margin-top:.1rem; font-size:.92rem; line-height:1.5}
+
+    /* Certifications */
+    .certs{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .cert{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding: 1.1rem 1.1rem;
+      display:flex; gap: 1rem; align-items:center;
+    }
+    .cert .mark{
+      width: 66px; height:66px; border-radius: 22px;
+      background: rgba(65,186,67,.10);
+      border: 1px solid rgba(65,186,67,.22);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+    }
+    .cert .mark svg{width: 34px; height:34px; fill: var(--green)}
+    .cert .text{display:flex; flex-direction:column; gap:.25rem}
+    .cert .text .h{font-weight: 900; letter-spacing:.02em}
+    .cert .text .p{color: rgba(255,255,255,.75); font-weight: 650; line-height:1.55}
+
+    /* Info Boxes */
+    .info-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .info-card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.2rem;
+      display:flex;
+      flex-direction:column;
+      gap: .8rem;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      text-align:center;
+    }
+    .info-card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(65,186,67,.35);
+      box-shadow: 0 20px 50px rgba(65,186,67,.15);
+    }
+    .info-card-icon{
+      font-size: 3rem;
+      margin: 0 auto;
+    }
+    .info-card-title{
+      font-weight: 900;
+      letter-spacing:.02em;
+      font-size: 1.25rem;
+      color: var(--green);
+    }
+    .info-card-desc{
+      color: rgba(255,255,255,.75);
+      font-weight: 600;
+      line-height: 1.6;
+      font-size: .95rem;
+      margin: .5rem 0;
+    }
+    .info-card .btn{
+      margin-top: .5rem;
+      align-self:center;
+    }
+
+    /* Modals */
+    .modal{
+      display:none;
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(0,0,0,.7);
+      z-index:1000;
+      overflow-y:auto;
+      padding:2rem 0;
+    }
+    .modal.open{
+      display:block;
+    }
+    .modal-content{
+      background:var(--bg1);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:22px;
+      max-width:900px;
+      margin:2rem auto;
+      padding:2.5rem;
+      color:var(--text);
+      animation: slideUp .3s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-close{
+      float:right;
+      background:none;
+      border:none;
+      color:var(--text);
+      font-size:1.5rem;
+      cursor:pointer;
+      padding:0;
+      width:30px;
+      height:30px;
+    }
+    .modal-close:hover{
+      color: var(--green);
+    }
+    .modal h2{
+      margin-top:0;
+      font-size:1.8rem;
+      font-weight:900;
+      margin-bottom:1.5rem;
+      color: var(--green);
+    }
+    .modal h3{
+      font-weight:900;
+      margin-top:1.5rem;
+      margin-bottom:.8rem;
+      color: rgba(255,255,255,.95);
+    }
+    .modal p, .modal li{
+      line-height:1.7;
+      color:rgba(255,255,255,.85);
+      margin-bottom: .8rem;
+    }
+    .modal ul{
+      margin-left: 1.5rem;
+      line-height: 1.8;
+    }
+    .modal-section{
+      margin-bottom: 2rem;
+    }
+    .price-box{
+      margin-top: 1rem;
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      background: rgba(65,186,67,.08);
+      border: 1px solid rgba(65,186,67,.22);
+    }
+    .price-box strong{
+      color: var(--green);
+      font-size: 1.1rem;
+    }
+
+    /* Hide carousel buttons */
+    .carousel .prev, .carousel .next{
+      display: none !important;
+    }
+
+    /* Contact */
+    .contact-wrap{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    form{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding: 1.1rem;
+    }
+    .fields{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: .85rem;
+    }
+    label{
+      display:block;
+      font-weight: 800;
+      font-size: .9rem;
+      color: rgba(255,255,255,.86);
+      margin-bottom: .35rem;
+    }
+    input, textarea{
+      width:100%;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      color: var(--text);
+      padding: .85rem .9rem;
+      font-family: inherit;
+      font-weight: 650;
+      outline:none;
+      transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(65,186,67,.42);
+      box-shadow: 0 0 0 4px rgba(65,186,67,.12);
+      background: rgba(0,0,0,.28);
+    }
+    textarea{min-height: 130px; resize: vertical}
+    .help{
+      color: rgba(255,255,255,.72);
+      font-weight: 650;
+      line-height: 1.55;
+      margin-top: .85rem;
+    }
+    .error{
+      display:none;
+      margin-top: .6rem;
+      padding: .75rem .85rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,80,80,.30);
+      background: rgba(255,80,80,.08);
+      color: rgba(255,210,210,.95);
+      font-weight: 750;
+    }
+    .success{
+      display:none;
+      margin-top: .6rem;
+      padding: .75rem .85rem;
+      border-radius: 16px;
+      border: 1px solid rgba(65,186,67,.30);
+      background: rgba(65,186,67,.10);
+      color: rgba(220,255,235,.95);
+      font-weight: 800;
+    }
+
+    .contact-card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      padding: .75rem .6rem;
+      display:flex;
+      flex-direction:column;
+      gap: .5rem;
+      max-width: 500px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .line{
+      display:flex; align-items:center; gap:.75rem;
+      padding: .75rem .85rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      position:relative;
+      overflow:hidden;
+      transition: all .3s ease;
+      cursor:pointer;
+    }
+    .line::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      height:100%;
+      width:0;
+      background: linear-gradient(90deg, rgba(65,186,67,.15), transparent);
+      transition: width .3s ease;
+      z-index:0;
+      pointer-events:none;
+    }
+    .line:hover::before{
+      width:100%;
+    }
+    .line:hover{
+      border-color: rgba(65,186,67,.35);
+      box-shadow: 0 0 20px rgba(65,186,67,.15);
+    }
+    .line > *{
+      position:relative;
+      z-index:1;
+    }
+
+    /* Footer */
+    footer{
+      padding: 2.2rem 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.15);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: .8rem;
+      align-items:center;
+    }
+    .copyright{
+      color: rgba(255,255,255,.65);
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    /* Reveal animations */
+    .reveal{opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform: translateY(0px)}
+    .delay-1{transition-delay: .08s}
+    .delay-2{transition-delay: .16s}
+    .delay-3{transition-delay: .24s}
+
+    /* Responsive */
+    @media (min-width: 860px){
+      nav ul{display:flex}
+      .hamburger{display:none}
+      .mobile-panel{display:none !important}
+
+      .hero-inner{grid-template-columns: 1.15fr .85fr; align-items:center; gap: 1.6rem}
+      .hero-right{
+        justify-self:end;
+        width:min(430px, 100%);
+      }
+      .stats{grid-template-columns: repeat(2, minmax(0,1fr));}
+      .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+      .ba-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .icon-grid{grid-template-columns: repeat(3, minmax(0,1fr))}
+      .certs{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .info-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .contact-wrap{grid-template-columns: 1.25fr .75fr; align-items:start}
+      .fields{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .span-2{grid-column: span 2}
+      .footer-grid{grid-template-columns: 1.2fr .8fr; align-items:end}
+    }
+
+    /* How it works */
+    .steps-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .step{
+      padding: 1.5rem 1.2rem;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      text-align:center;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .step:hover{
+      transform: translateY(-4px);
+      border-color: rgba(65,186,67,.35);
+    }
+    .step-num{
+      width: 48px; height:48px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(65,186,67,.95), rgba(65,186,67,.70));
+      color: #07130b;
+      display:grid; place-items:center;
+      font-weight: 900;
+      font-size: 1.5rem;
+      margin: 0 auto 1rem;
+      box-shadow: 0 10px 30px rgba(65,186,67,.18);
+    }
+    .step-title{
+      font-weight: 900;
+      letter-spacing:.02em;
+      margin-bottom: .5rem;
+    }
+    .step-desc{
+      color: rgba(255,255,255,.75);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .faq-item{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .faq-item summary{
+      list-style: none;
+      cursor: pointer;
+      padding: 1.1rem 1.1rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+      transition: background .2s ease;
+    }
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-q{
+      font-weight: 900;
+      letter-spacing:.02em;
+      color: var(--green);
+    }
+    .faq-q::after{
+      content: "+";
+      font-weight: 900;
+      color: rgba(255,255,255,.7);
+      margin-left: auto;
+    }
+    .faq-item[open] .faq-q::after{content: "–";}
+    .faq-a{
+      color: rgba(255,255,255,.78);
+      font-weight: 600;
+      line-height: 1.65;
+      padding: 0 1.1rem;
+      border-top: 1px solid transparent;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: height .35s ease, opacity .25s ease, padding .35s ease, border-color .35s ease;
+    }
+    .faq-item[open] summary{background: rgba(255,255,255,.03);}
+    .faq-item[open] .faq-a{
+      padding: .9rem 1.1rem 1.1rem;
+      border-top-color: rgba(255,255,255,.08);
+      height: auto;
+      opacity: 1;
+    }
+    .faq-item.animating .faq-a{height: var(--faq-h, 0px);}
+
+    @media (min-width: 860px){
+      .steps-grid{grid-template-columns: repeat(4, minmax(0,1fr))}
+      .faq-grid{grid-template-columns: repeat(3, minmax(0,1fr))}
+    }
+    .filled-text{
+      display:block;
+      font-size: clamp(1.8rem, 5.2vw, 3.45rem);
+      font-weight: 900;
+      letter-spacing:.08em;
+      margin-top:.35rem;
+      background: linear-gradient(180deg, #00ff41, #72d679);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="WAPREX domů">
+        <img class="brand-img" src="pics/logo.png" alt="WAPREX logo">
+       
+      </a>
+
+      <nav aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#predpo">Před / Po</a></li>
+          <li><a href="#dalsi">Další služby</a></li>
+          <li><a href="#certifikace">Certifikace</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn secondary" href="#kontakt" title="Přejít na kontakt">Poptávka</a>
+        <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="container">
+        <a href="#sluzby" class="m-link">Služby <span>→</span></a>
+        <a href="#predpo" class="m-link">Před / Po <span>→</span></a>
+        <a href="#dalsi" class="m-link">Další služby <span>→</span></a>
+        <a href="#certifikace" class="m-link">Certifikace <span>→</span></a>
+        <a href="#kontakt" class="m-link">Kontakt <span>→</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+   
+  <main id="top" class="hero">
+    <div class="container hero-inner">
+      <div>
+      </div>
+        <div class="pill reveal">
+          <span style="display:inline-grid;place-items:center;width:10px;height:10px;border-radius:999px;background:var(--green);box-shadow:0 0 0 6px rgba(46,204,113,.12)"></span>
+          Profesionální péče o exteriéry
+        </div>
+      
+        
+
+
+        <h1 class="reveal delay-1">
+          ČIŠTĚNÍ – IMPREGNACE – ÚDRŽBA
+          <span class="filled-text">EXTERIÉRU</span>
+        </h1>
+
+        <p class="reveal delay-2">
+          Šetrné a ověřené postupy pro střechy, fasády i dlažby. Obnovíme čistý a jednotný vzhled bez zbytečných zásahů do povrchu.
+        </p>
+
+        <div class="hero-actions reveal delay-3">
+          <a class="btn" href="#kontakt">
+            Nezávazná konzultace ZDARMA
+            <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:#07130b">
+              <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z"/>
+            </svg>
+          </a>
+          <a class="btn secondary" href="#predpo">Ukázky realizací</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="num" data-count="20" data-suffix="+">0</div>
+            <div class="lbl"> Týdeních realizací po celé ČR</div>
+          </div>
+          <div class="stat reveal delay-1">
+            <div class="num" data-count="7" data-suffix=" dní">0</div>
+            <div class="lbl">běžná dostupnost termínu*</div>
+          </div>
+          <div class="stat reveal delay-2">
+            <div class="num" data-count="98" data-suffix="%">0</div>
+            <div class="lbl">spokojenost zákazníků</div>
+          </div>
+          <div class="stat reveal delay-3">
+            <div class="num" data-count="2" data-suffix=" roky">0</div>
+            <div class="lbl">doporučený interval údržby</div>
+          </div>
+        </div>
+        <p style="margin-top:.7rem;color:rgba(255,255,255,.55);font-weight:650;font-size:.9rem" class="reveal delay-3">
+          *Orientačně – záleží na sezóně a lokalitě.
+        </p>
+      </div>
+
+      <div class="hero-right reveal delay-2">
+      </div>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="sluzby">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Služby</h2>
+        <p>Čištění, impregnace a údržba exteriérů s důrazem na bezpečnost, šetrnost a dlouhodobý výsledek.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="media">
+            <span class="badge">STŘEŠNÍ KRYTINY</span>
+            <img alt="Červená střešní taška s mechem"
+                 src="pics/tasky.jpg">
+          </div>
+          <div class="content">
+            <h3>STŘEŠNÍ KRYTINY</h3>
+            <ul class="bullets">
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Používáme šetrné a ověřené postupy</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Mech a nečistoty zkracují životnost střechy</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Čištění, impregnace a údržba</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card reveal delay-1">
+          <div class="media">
+            <span class="badge">FASÁDY</span>
+            <img alt="Žlutý rodinný dům"
+                 src="pics/fasady.jpg">
+          </div>
+          <div class="content">
+            <h3>FASÁDY</h3>
+            <ul class="bullets">
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Obnovíme čistý a jednotný vzhled domu</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Bez zásahu do struktury povrchu</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Ideální před prodejem / po zimě</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card reveal delay-2">
+          <div class="media">
+            <span class="badge">DLAŽBY</span>
+            <img alt="Venkovní dlažba / terasa"
+                 src="pics/dlazba.jpg ">
+          </div>
+          <div class="content">
+            <h3>DLAŽBY</h3>
+            <ul class="bullets">
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Komplexní péče o dlažby</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Obnovíme původní vzhled</li>
+              <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8-8 1.4 1.4-9.4 9.4z"/></svg></span>Impregnace pro delší čistotu</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jak to probíhá -->
+  <section id="jak-to-funguje">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Jak to probíhá</h2>
+        <p>Čtyři jednoduché kroky, jak se dostanete k čistému a zdravému exteriéru.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div class="step-title">Pošlete poptávku</div>
+          <div class="step-desc">Napište nám zprávu, ideálně s fotografiemi. Konzultace je zdarma.</div>
+        </div>
+        <div class="step reveal delay-1">
+          <div class="step-num">2</div>
+          <div class="step-title">Navrhneme řešení</div>
+          <div class="step-desc">Ozveme se obratem s konkrétním návrhem a cenou.</div>
+        </div>
+        <div class="step reveal delay-2">
+          <div class="step-num">3</div>
+          <div class="step-title">Přijedeme a čistíme</div>
+          <div class="step-desc">Odborně vyčistíme váš exteriér bez zbytečných zásahů.</div>
+        </div>
+        <div class="step reveal delay-3">
+          <div class="step-num">4</div>
+          <div class="step-title">Vše je čisté</div>
+          <div class="step-desc">Uklidíme po sobě, vy si užijete čistý a zdravý dům.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After -->
+  <section id="predpo">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Před / Po</h2>
+        <p>Prohlédněte si před a po obrázky. Karusel se automaticky přepíná každé 3 sekundy nebo klikněte na šipky.</p>
+      </div>
+
+      <div class="ba-grid">
+        <!-- Slider 1 -->
+        <div class="ba reveal">
+          <div class="ba-top">
+            <div class="title">Střecha – odstranění mechu</div>
+            <div class="hint">Automatické přepínání každé 3 sekundy</div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="slide active">
+                <img alt="Před – střecha s mechem"
+                     src="pics/pic1.jpg">
+                <div class="label">PŘED</div>
+              </div>
+              <div class="slide">
+                <img alt="Po – čistá střecha"
+                     src="pics/pic.jpg">
+                <div class="label">PO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider 2 -->
+        <div class="ba reveal delay-1">
+          <div class="ba-top">
+            <div class="title">Fasáda – sjednocení vzhledu</div>
+            <div class="hint">Automatické přepínání každé 3 sekundy</div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="slide active">
+                <img alt="Před – znečištěná fasáda"
+                     src="pics/fas1.jpg">
+                <div class="label">PŘED</div>
+              </div>
+              <div class="slide">
+                <img alt="Po – čistá fasáda"
+                     src="pics/fas2.jpg">
+                <div class="label">PO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider 3 -->
+        <div class="ba reveal delay-2">
+          <div class="ba-top">
+            <div class="title">Dlažba – odstranění dlouhodobé špíny</div>
+            <div class="hint">Automatické přepínání každé 3 sekundy</div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="slide active">
+                <img alt="Před – špinavá dlažba"
+                     src="pics/dlaz1.jpg">
+                <div class="label">PŘED</div>
+              </div>
+              <div class="slide">
+                <img alt="Po – čistá dlažba"
+                     src="pics/dlaz2.jpg">
+                <div class="label">PO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider 4 -->
+        <div class="ba reveal delay-3">
+          <div class="ba-top">
+            <div class="title">Terasa – vyčištění povrchu</div>
+            <div class="hint">Automatické přepínání každé 3 sekundy</div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="slide active">
+                <img alt="Před – terasa"
+                     src="pics/tera1.jpg">
+                <div class="label">PŘED</div>
+              </div>
+              <div class="slide">
+                <img alt="Po – terasa po čištění"
+                     src="pics/tera2.jpg">
+                <div class="label">PO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="water-note reveal">
+        <div class="drop" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2s7 8 7 13a7 7 0 1 1-14 0C5 10 12 2 12 2Zm0 18a5 5 0 0 0 5-5c0-3-3.1-7.1-5-9.4C10.1 7.9 7 12 7 15a5 5 0 0 0 5 5Z"/></svg>
+        </div>
+        <div>
+          <strong>JEDINÉ, CO POTŘEBUJEME, JE PŘÍSTUP K VAŠÍ VODĚ</strong><br>
+          <span>O zbytek se postaráme – přivezeme techniku, ochráníme okolí a vše po sobě uklidíme.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services -->
+  <section id="dalsi">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>A další…</h2>
+        <p>Postaráme se i o další části exteriéru. Pokud tu vaši službu nevidíte, napište – najdeme řešení.</p>
+      </div>
+
+      <div class="icon-grid">
+        <div class="icon-card reveal">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13h18v2H3v-2Zm2-8h14l1 6H4l1-6Zm2 12h10v2H7v-2Z"/></svg></div>
+          <div><div class="t">Čištění okapů</div><div class="d">Odstranění nánosů, kontrola průchodnosti.</div></div>
+        </div>
+        <div class="icon-card reveal delay-1">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 2h2v3h-2V2Zm-7 9h3v2H4v-2Zm13 0h3v2h-3v-2ZM6.2 6.2l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1Zm10.1 10.1 1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></div>
+          <div><div class="t">Solární panely</div><div class="d">Šetrné čištění pro lepší výkon a vzhled.</div></div>
+        </div>
+        <div class="icon-card reveal delay-2">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h8v2H8v-2Z"/></svg></div>
+          <div><div class="t">Okna a rámy</div><div class="d">Čistá okna bez šmouh, včetně rámů.</div></div>
+        </div>
+        <div class="icon-card reveal delay-3">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v4h2v2h-2v14H7V8H5V6h2V2Zm2 2v2h6V4H9Zm0 6h6v2H9v-2Zm0 4h6v2H9v-2Z"/></svg></div>
+          <div><div class="t">Náhrobní kameny</div><div class="d">Šetrné čištění a oživení povrchu.</div></div>
+        </div>
+        <div class="icon-card reveal">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 9L2 6v11l10 5 10-5V6l-10 5Z"/></div>
+          <div><div class="t">Impregnace</div><div class="d">Ochrana proti vodě, špíně a řasám.</div></div>
+        </div>
+        <div class="icon-card reveal delay-1">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6H4V4h16v2Zm0 14H4v-2h16v2Zm-2-3H6V7h12v10Z"/></svg></div>
+          <div><div class="t">Údržba exteriéru</div><div class="d">Pravidelná péče pro dlouhodobý výsledek.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifikace">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Certifikace</h2>
+        <p>Pracujeme profesionálně a bezpečně. Důraz klademe na správný postup a ochranu povrchů.</p>
+      </div>
+
+      <div class="certs">
+        <div class="cert reveal">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 2 12h3v9h6v-6h2v6h6v-9h3L12 3Z"/></svg>
+          </div>
+          <div class="text">
+            <div class="h">PROFESIONÁLNÍ, CERTIFIKOVANÁ PÉČE O VÁŠ EXTERIÉR</div>
+            <div class="p">Šetrné postupy, moderní vybavení a důraz na kvalitu. Certifikovaní specialisté pro čištění exteriérů.</div>
+          </div>
+        </div>
+        <div class="cert reveal delay-1">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0 11 18 0z"/></svg>
+          </div>
+          <div class="text">
+            <div class="h">CERTIFIED EXTERIOR CLEANING SPECIALIST</div>
+            <div class="p">Oficiální certifikace pro profesionální údržbu střech, fasád a dlažeb. Garance kvality a bezpečnosti.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Boxes -->
+  <section id="info-sluzby">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Více o našich službách</h2>
+        <p>Podrobné informace o jednotlivých službách, cenách a postupech čištění.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <div class="info-card-icon">🏠</div>
+          <div class="info-card-title">Střechy</div>
+          <div class="info-card-desc">Šetrné čištění a ochrana vaší střechy. Odstraníme mechy, lišejníky a zajistíme dlouhodobou čistotu.</div>
+          <button class="btn" onclick="document.getElementById('roof-modal').classList.add('open')">Zjistit více</button>
+        </div>
+
+        <div class="info-card reveal delay-1">
+          <div class="info-card-icon">🧱</div>
+          <div class="info-card-title">Dlažby</div>
+          <div class="info-card-desc">Komplexní péče o vaši dlažbu. Čištění, pískování a impregnace pro dlouhodobý vzhled.</div>
+          <button class="btn" onclick="document.getElementById('paving-modal').classList.add('open')">Zjistit více</button>
+        </div>
+
+        <div class="info-card reveal delay-2">
+          <div class="info-card-icon">🏢</div>
+          <div class="info-card-title">Fasády</div>
+          <div class="info-card-desc">Obnova vzhledu vaší fasády. Šetrné čištění bez poškození povrchu, ideální před prodejí domu.</div>
+          <button class="btn" onclick="document.getElementById('facade-modal').classList.add('open')">Zjistit více</button>
+        </div>
+
+        <div class="info-card reveal delay-3">
+          <div class="info-card-icon">💧</div>
+          <div class="info-card-title">Impregnace</div>
+          <div class="info-card-desc">Nanometrická ochrana vaších povrchů. Snižuje nasákavost a prodlužuje čistotu až o 15 let.</div>
+          <button class="btn" onclick="document.getElementById('impregnation-modal').classList.add('open')">Zjistit více</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>FAQ ke službám</h2>
+        <p>Stručně k postupu, intervalům čištění a impregnaci.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item reveal">
+          <summary class="faq-q">Jak probíhá čištění střech, fasád a dlažeb?</summary>
+          <div class="faq-a">Nejprve posoudíme povrch a míru znečištění, nastavíme správný tlak a šetrně odstraníme mechy, řasy a nečistoty. U dlažby po čištění doplníme spáry pískováním. Dle potřeby aplikujeme ochrannou chemii a vše zakončíme úklidem a kontrolou.</div>
+        </details>
+        <details class="faq-item reveal delay-1">
+          <summary class="faq-q">Jak často čistit a jak dlouho vydrží výsledek?</summary>
+          <div class="faq-a">Střechy obvykle 3–5 let (ve stínu 2–3), dlažby 3–5 let (stinná místa 2–3), fasády 6–10 let (u lesa či silnice 4–6). Výsledek bez impregnace typicky 2–5 let podle povrchu, s impregnací 4–15 let.</div>
+        </details>
+        <details class="faq-item reveal delay-2">
+          <summary class="faq-q">Co umí impregnace a kdy se vyplatí?</summary>
+          <div class="faq-a">Snižuje nasákavost, zpomaluje růst mechů a řas, usnadňuje údržbu a prodlužuje čistotu. Životnost bývá 8–15 let; doporučujeme ji hlavně u starších povrchů nebo domů ve stínu.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary class="faq-q">Co potřebujeme z vaší strany?</summary>
+          <div class="faq-a">Stačí přístup k vodě a elektřině. Techniku, chemii i ochranu okolí přivezeme a po práci vše uklidíme.</div>
+        </details>
+        <details class="faq-item reveal delay-1">
+          <summary class="faq-q">Poškodí čištění povrch?</summary>
+          <div class="faq-a">Ne. Používáme regulovaný tlak a postup podle typu povrchu, takže nepoškozujeme krytinu, omítku ani spáry.</div>
+        </details>
+        <details class="faq-item reveal delay-2">
+          <summary class="faq-q">Jak se počítá cena?</summary>
+          <div class="faq-a">Záleží na ploše, typu povrchu, míře znečištění a dostupnosti. Pošlete fotky a základní info a připravíme konkrétní nabídku.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="kontakt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Kontakt</h2>
+        <p>Pošlete nám poptávku s fotografiemi a ozveme se obratem s cenovou nabídkou. Konzultace a návrh řešení zdarma.</p>
+      </div>
+
+
+
+          
+          
+
+        <div class="contact-card">
+          <a class="line" href="tel:+420608530555" style="text-decoration:none;color:inherit">
+            <div class="ic">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="stack">
+              <div class="main">+420 608 530 555</div>
+            </div>
+          </a>
+          <a class="line" href="mailto:info@waprex.cz" style="text-decoration:none;color:inherit">
+            <div class="ic">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="stack">
+              <div class="main">INFO@WAPREX.CZ</div>
+            </div>
+          </a>
+          <a class="line" href="https://www.instagram.com/waprex_?igsh=MWEzbzZ4aG04ZHpnbQ==" target="_blank" style="text-decoration:none;color:inherit">
+            <div class="ic">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.645.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/></svg>
+            </div>
+            <div class="stack">
+              <div class="main">@WAPREX_</div>
+            </div>
+          </a>
+          <div class="small-free" style="margin-top: .3rem; font-size: .85rem;">
+            Konzultace a cenová nabídka ZDARMA
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="copyright">
+        &copy; 2026 WAPREX. Všechna práva vyhrazena. Profesionální čištění, impregnace a údržba exteriérů. <a href="#privacy-modal" style="color: var(--green); text-decoration: underline;">Zásady ochrany osobních údajů</a>
+      </div>
+      <div>
+        <a href="#top" class="btn secondary" style="margin-top:0">Zpět nahoru</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Info Modals -->
+  <!-- Roof Modal -->
+  <div id="roof-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('roof-modal').classList.remove('open')" aria-label="Zavřít">×</button>
+      <h2>Střechy – Čištění a ochrana</h2>
+      
+      <div class="modal-section">
+        <h3>Náš postup:</h3>
+        <p><strong>1️⃣ Prohlídka a zhodnocení střechy</strong></p>
+        <p>Každou střechu nejdříve zkontrolujeme – typ krytiny, míru znečištění a celkový stav. Díky tomu volíme správný a bezpečný postup, který střechu nepoškodí.</p>
+        
+        <p><strong>2️⃣ Šetrné čištění střechy</strong></p>
+        <p>Používáme profesionální techniku s regulací tlaku. Odstraníme mechy, lišejníky a usazené nečistoty, vždy od hřebene dolů, aby nedocházelo k zatékání.<br>
+        ❗ Nejedeme „na sílu" – chráníme povrch i životnost střechy.<br>
+        ❗ Na střešní krytiny nepoužíváme žádné rotační turbo trysky!</p>
+        
+        <p><strong>3️⃣ Ochranná chemie proti mechům a řasám</strong></p>
+        <p>Po vyčištění aplikujeme speciální přípravek proti mechům a řasám, který ničí zbytky spor a zpomaluje jejich návrat.<br>
+        ✔️ Přípravky jsou certifikované, šetrné k materiálu i okolí domu.</p>
+        
+        <p><strong>4️⃣ Impregnace střechy (na přání)</strong></p>
+        <p>Impregnace uzavře póry krytiny, sníží nasákavost a udrží střechu čistou po delší dobu. Doporučujeme ji zejména u starších střech.</p>
+        
+        <p><strong>5️⃣ Úklid a závěrečná kontrola</strong></p>
+        <p>Po dokončení práce uklidíme okolí domu a zkontrolujeme výsledek. Odjíždíme až ve chvíli, kdy je vše hotové.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Ceník čištění střech</h3>
+        
+        <div class="price-box">
+          <strong>🧼 Čištění střechy – od 89 Kč / m²</strong>
+          <p>Cena zahrnuje:<br>
+          • šetrné vysokotlaké čištění<br>
+          • odstranění mechů, lišejníků a nečistot<br>
+          • profesionální postup bez poškození krytiny<br>
+          • veškerý použitý materiál a techniku<br>
+          • dopravu prvních 50 km tam i zpět (poté 9 Kč/km)</p>
+        </div>
+
+        <div class="price-box">
+          <strong>🛡️ Čištění střechy + impregnace – od 149 Kč / m²</strong>
+          <p>(čištění 89 Kč + impregnace 60 Kč / m²)<br>
+          Impregnace:<br>
+          • snižuje nasákavost krytiny<br>
+          • zpomaluje opětovné zarůstání<br>
+          • prodlužuje životnost střechy<br>
+          • udrží střechu déle čistou<br>
+          • používáme velmi kvalitní ověřenou impregnaci<br>
+          👉 Doporučujeme zejména u starších střech nebo domů ve stínu.</p>
+        </div>
+
+        <p><strong>Možné příplatky:</strong><br>
+        V závislosti na stavu a náročnosti zakázky může být účtován příplatek:<br>
+        • silné znečištění střechy: +10 až +20 Kč / m²<br>
+        • velký sklon střechy / větší výška objektu / složitý přístup: +10 až +20 Kč / m²<br>
+        O případném příplatku vždy informujeme předem.</p>
+        
+        <p style="font-size: .9rem; color: rgba(255,255,255,.65); margin-top: 1rem;">Uvedené ceny jsou konečné pro domácnosti (včetně DPH). Firmám a komerčním objektům je účtováno DPH dle zákonné sazby.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paving Modal -->
+  <div id="paving-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('paving-modal').classList.remove('open')" aria-label="Zavřít">×</button>
+      <h2>Dlažby – Čištění a údržba</h2>
+      
+      <div class="modal-section">
+        <h3>Jak probíhá čištění dlažby</h3>
+        
+        <p><strong>1️⃣ Posouzení stavu dlažby</strong></p>
+        <p>Nejprve zhodnotíme typ dlažby, míru znečištění a stav spár. Podle toho zvolíme správný tlak a postup, aby nedošlo k poškození povrchu.</p>
+        
+        <p><strong>2️⃣ Šetrné čištění dlažby</strong></p>
+        <p>Pomocí profesionální tlakové techniky odstraníme:<br>
+        • řasy, mechy a plísně<br>
+        • usazenou špínu, mastnotu a prach<br>
+        Čistíme rovnoměrně a kontrolovaně, aby byl výsledek čistý a jednotný.</p>
+        
+        <p><strong>3️⃣ Pískování spár</strong></p>
+        <p>Po vyčištění provádíme pískování spár, které:<br>
+        • obnoví vzhled dlažby<br>
+        • doplní vymytý písek<br>
+        • stabilizuje dlažbu<br>
+        • omezí prorůstání plevele<br>
+        Tento krok je klíčový pro dlouhodobý výsledek.</p>
+        
+        <p><strong>4️⃣ Impregnace dlažby (volitelně)</strong></p>
+        <p>Na přání aplikujeme impregnaci, která:<br>
+        • snižuje nasákavost<br>
+        • zpomaluje tvorbu mechů a řas<br>
+        • usnadňuje další údržbu<br>
+        • udrží dlažbu déle čistou</p>
+        
+        <p><strong>5️⃣ Úklid a kontrola</strong></p>
+        <p>Po dokončení práce uklidíme okolí a zkontrolujeme výsledek.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Ceník čištění dlažby</h3>
+        
+        <div class="price-box">
+          <strong>🧼 Čištění dlažby + pískování – od 69 Kč / m²</strong>
+          <p>Cena zahrnuje:<br>
+          • tlakové čištění dlažby<br>
+          • odstranění mechů, řas a nečistot<br>
+          • pískování a doplnění spár<br>
+          • stabilizaci a obnovení vzhledu dlažby<br>
+          • veškerý použitý materiál a techniku<br>
+          • dopravu do 50 km zdarma (tam i zpět)<br>
+          • (nad 50 km: 9 Kč / km)</p>
+        </div>
+
+        <div class="price-box">
+          <strong>🛡️ Čištění dlažby + impregnace – od 124 Kč / m²</strong>
+          <p>(čištění 69 Kč + impregnace 55 Kč / m²)<br>
+          Impregnace:<br>
+          • snižuje nasákavost dlažby<br>
+          • nanometrická impregnace s mokrým efektem<br>
+          • omezuje tvorbu mechů a řas<br>
+          • usnadňuje další údržbu<br>
+          • prodlužuje životnost dlažby<br>
+          • používáme kvalitní a ověřenou impregnaci</p>
+        </div>
+
+        <p><strong>Důležité informace:</strong><br>
+        Při silném znečištění může být účtován příplatek +10 až +20 Kč / m². O případném příplatku vždy informujeme předem.</p>
+        
+        <p style="font-size: .9rem; color: rgba(255,255,255,.65); margin-top: 1rem;">Uvedené ceny jsou konečné pro domácnosti (včetně DPH). Firmám a komerčním objektům je účtováno DPH dle zákonné sazby.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Facade Modal -->
+  <div id="facade-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('facade-modal').classList.remove('open')" aria-label="Zavřít">×</button>
+      <h2>Fasády – Čištění a oživení</h2>
+      
+      <div class="modal-section">
+        <h3>Jak probíhá čištění fasády</h3>
+        
+        <p><strong>1️⃣ Posouzení fasády</strong></p>
+        <p>Nejprve zhodnotíme typ povrchu (zateplená fasáda, omítka, beton apod.) a míru znečištění. Podle toho volíme šetrný postup, aby nedošlo k poškození povrchu.</p>
+        
+        <p><strong>2️⃣ Šetrné čištění</strong></p>
+        <p>Používáme profesionální techniku s regulací tlaku. Odstraníme:<br>
+        • řasy, plísně a nečistoty<br>
+        • saze, prach a povrchové skvrny<br>
+        Tlak vždy přizpůsobujeme typu fasády – nepoškozujeme zateplení ani omítku.</p>
+        
+        <p><strong>3️⃣ Chemická ochrana</strong></p>
+        <p>Po vyčištění aplikujeme ochranný přípravek proti řasám a plísním, který:<br>
+        • ničí zbytky mikroorganismů<br>
+        • zpomaluje jejich návrat<br>
+        • prodlužuje čistý vzhled fasády</p>
+        
+        <p><strong>4️⃣ Impregnace fasády (volitelně)</strong></p>
+        <p>Impregnace:<br>
+        • snižuje nasákavost fasády<br>
+        • omezuje usazování nečistot<br>
+        • prodlužuje životnost povrchu<br>
+        Doporučujeme zejména u zateplených fasád.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Ceník čištění fasád</h3>
+        
+        <div class="price-box">
+          <strong>🧼 Čištění fasády – od 79 Kč / m²</strong>
+          <p>Cena zahrnuje:<br>
+          • šetrné tlakové čištění s regulací tlaku<br>
+          • odstranění řas, plísní a povrchových nečistot<br>
+          • postup vhodný i pro zateplené fasády<br>
+          • veškerý použitý materiál a techniku<br>
+          • dopravu do 50 km zdarma (tam i zpět)<br>
+          • (nad 50 km: 9 Kč / km)</p>
+        </div>
+
+        <div class="price-box">
+          <strong>🎨 Impregnace fasády s oživením barvy – od 149 Kč / m²</strong>
+          <p>(čištění 79 Kč + impregnace s oživením barvy 70 Kč / m²)<br>
+          Impregnace s oživením barvy:<br>
+          • zvýrazní a sjednotí původní odstín fasády<br>
+          • snižuje nasákavost povrchu<br>
+          • zpomaluje návrat řas a plísní<br>
+          • prodlužuje životnost fasády<br>
+          • používáme kvalitní a ověřené přípravky<br>
+          👉 Doporučujeme zejména u starších fasád a domů ve stínu.</p>
+        </div>
+
+        <p><strong>Důležité informace:</strong><br>
+        • Při silném znečištění může být účtován příplatek +10 až +20 Kč / m²<br>
+        • Při větší výšce objektu nebo náročném přístupu může být účtován příplatek +10 až +20 Kč / m²<br>
+        O případném příplatku vždy informujeme předem.</p>
+        
+        <p style="font-size: .9rem; color: rgba(255,255,255,.65); margin-top: 1rem;">Uvedené ceny jsou konečné pro domácnosti (včetné DPH). Firmám a komerčním objektům je účtováno DPH dle zákonné sazby.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impregnation Modal -->
+  <div id="impregnation-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('impregnation-modal').classList.remove('open')" aria-label="Zavřít">×</button>
+      <h2>Impregnace – Ochrana vašich povrchů</h2>
+      
+      <div class="modal-section">
+        <h3>Co je impregnace?</h3>
+        <p>Impregnace po nanesení na povrch vytvoří nanometrickou síť, která chrání povrch před vodou, olejem, usazeninami nečistot, plísní, mechem a usazováním vlhkosti na stěnách, betonovém nebo cihlovém zdivu, kamenných površích nebo jiných savých minerálních površích. Síťovina nebrání průchodu par, a proto povrch nadále volně dýchá. Životnost se pohybuje od 8 do 15 let v závislosti na typu a situaci podkladu.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Vlastnosti impregnovaného povrchu</h3>
+        
+        <p><strong>Vynikající repelentní schopnost</strong><br>
+        Ochrana proti oleji, posypové soli, stříkající a padající vodě, kyselinám, zásadám až do pH = 14. Velmi dobře pomáhá při hydrofobní ochraně nebo jako prevence proti korozi konstrukční oceli v betonu, betonových budovách v důsledku sněhové námrazy, posypové soli a deště.</p>
+        
+        <p><strong>Dlouhodobě udržuje „lotosový efekt"</strong><br>
+        Samočisticí efekt povrchu při kontaktu s vodou.</p>
+        
+        <p><strong>Nemění propustnost pro páru a plyny</strong><br>
+        Povrch volně dýchá bez omezení.</p>
+        
+        <p><strong>Velmi dobrý samočisticí účinek</strong><br>
+        Nečistoty se lépe omývají deštěm.</p>
+        
+        <p><strong>Odolnost vůči tlaku vody</strong><br>
+        Ošetřený povrch je dobře odolný vůči tlaku vody až do 50 barů.</p>
+        
+        <p><strong>Účinná ochrana před biologickým růstem</strong><br>
+        Jako účinná impregnace fasády výrazně ovlivňuje růst plísní a mechů.</p>
+        
+        <p><strong>UV ochrana bez změny barvy</strong><br>
+        Na povrchu se vytvoří účinná neviditelná vrstva odolná proti UV záření, přičemž se nezmění barva podkladu ani úroveň matu/lesku.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Proč si vybrat impregnaci?</h3>
+        
+        <p><strong>💰 Dlouhodobá úspora</strong><br>
+        Investice do impregnace se vyplatí vrácením delší životnosti povrchů a nižšími náklady na údržbu.</p>
+        
+        <p><strong>🏠 Ochrana vašeho majetku</strong><br>
+        Chráníte střechy, fasády a dlažby před degradací způsobenou vlhkostí a usazováním nečistot.</p>
+        
+        <p><strong>✨ Lepší estetika</strong><br>
+        Povrchy se lépe čistí a zůstávají čistější déle – váš dům vypadá lépe po řadu let.</p>
+        
+        <p><strong>🌍 Přírodní a bezpečná</strong><br>
+        Naše impregnace jsou certifikované a šetrné k životnímu prostředí i zdraví vaší rodiny.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.7); z-index:1000; overflow-y:auto; padding:2rem 0">
+    <div style="background:var(--bg1); border:1px solid rgba(255,255,255,.10); border-radius:22px; max-width:900px; margin:2rem auto; padding:2.5rem; color:var(--text)">
+      <button onclick="document.getElementById('privacy-modal').style.display='none'" style="float:right; background:none; border:none; color:var(--text); font-size:1.5rem; cursor:pointer; padding:0; width:30px; height:30px">×</button>
+      
+      <h2 style="margin-top:0; font-size:1.8rem; font-weight:900; margin-bottom:1.5rem">Zásady ochrany osobních údajů</h2>
+      
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">1. Kdo je správcem osobních údajů</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Správcem osobních údajů je:<br>
+        <strong>WAPREX</strong><br>
+        E-mail: info@waprex.cz<br>
+        Telefon: +420 608 530 555<br>
+        (dále jen „správce")
+      </p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">2. Jaké osobní údaje zpracováváme</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Prostřednictvím kontaktního formuláře nebo e-mailu můžeme zpracovávat následující údaje:
+      </p>
+      <ul style="line-height:1.8; color:rgba(255,255,255,.85)">
+        <li>jméno a příjmení (pokud je uvedeno),</li>
+        <li>e-mailovou adresu,</li>
+        <li>telefonní číslo (pokud je uvedeno),</li>
+        <li>obsah zprávy,</li>
+        <li>případné fotografie zaslané uživatelem.</li>
+      </ul>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">Technicky může dojít také ke zpracování IP adresy a základních technických údajů, které zpracovává náš formulářový poskytovatel.</p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">3. Účel zpracování</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Osobní údaje zpracováváme výhradně za účelem:
+      </p>
+      <ul style="line-height:1.8; color:rgba(255,255,255,.85)">
+        <li>odpovědi na dotazy,</li>
+        <li>komunikace se zákazníkem,</li>
+        <li>přípravy cenové nabídky nebo konzultace.</li>
+      </ul>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">Údaje nepoužíváme k marketingovým účelům, pokud k tomu nedáme zvláštní souhlas.</p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">4. Právní základ zpracování</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Zpracování osobních údajů probíhá na základě oprávněného zájmu správce (čl. 6 odst. 1 písm. f GDPR), kterým je odpověď na poptávku a komunikace se zájemcem o služby.
+      </p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">5. Doba uchování údajů</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Osobní údaje uchováváme:
+      </p>
+      <ul style="line-height:1.8; color:rgba(255,255,255,.85)">
+        <li>po dobu nezbytně nutnou k vyřízení dotazu,</li>
+        <li>maximálně 6 měsíců od poslední komunikace, pokud nedojde k navázání další spolupráce.</li>
+      </ul>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">6. Kdo má k údajům přístup</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Osobní údaje mohou být zpracovávány následujícími zpracovateli:
+      </p>
+      <ul style="line-height:1.8; color:rgba(255,255,255,.85)">
+        <li>poskytovatel webhostingu (GitHub Pages),</li>
+        <li>poskytovatel formulářové služby (Formspree).</li>
+      </ul>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">Údaje nejsou prodávány ani poskytovány třetím stranám pro jejich vlastní účely.</p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">7. Předávání údajů mimo EU</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Někteří poskytovatelé služeb mohou zpracovávat údaje mimo EU/EHP. V takovém případě je zajištěna odpovídající úroveň ochrany osobních údajů v souladu s GDPR (např. standardní smluvní doložky).
+      </p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">8. Práva subjektu údajů</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Máte právo:
+      </p>
+      <ul style="line-height:1.8; color:rgba(255,255,255,.85)">
+        <li>požadovat přístup ke svým osobním údajům,</li>
+        <li>požadovat opravu nebo výmaz osobních údajů,</li>
+        <li>vznést námitku proti zpracování,</li>
+        <li>požadovat omezení zpracování,</li>
+        <li>podat stížnost u dozorového úřadu.</li>
+      </ul>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        <strong>Dozorovým úřadem v České republice je:</strong><br>
+        Úřad pro ochranu osobních údajů (ÚOOÚ)<br>
+        www.uoou.cz
+      </p>
+
+      <h3 style="font-weight:900; margin-top:1.5rem; margin-bottom:.5rem">9. Závěrečná ustanovení</h3>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Odesláním kontaktního formuláře potvrzujete, že jste seznámili s těmito zásadami ochrany osobních údajů.
+      </p>
+      <p style="line-height:1.6; color:rgba(255,255,255,.85)">
+        Tyto zásady jsou platné od dne jejich zveřejnění.
+      </p>
+
+      <button onclick="document.getElementById('privacy-modal').style.display='none'" class="btn" style="margin-top:1.5rem">Zavřít</button>
+    </div>
+  </div>
+
+  <script>
+    // Open privacy modal when clicking on the link
+    document.querySelectorAll('a[href="#privacy-modal"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('privacy-modal').style.display = 'block';
+      });
+    });
+
+    // Close modal when clicking outside of it
+    document.getElementById('privacy-modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('privacy-modal')) {
+        document.getElementById('privacy-modal').style.display = 'none';
+      }
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobilePanel = document.getElementById('mobilePanel');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobilePanel.classList.toggle('open');
+    });
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Close mobile menu if open
+        hamburger.classList.remove('active');
+        mobilePanel.classList.remove('open');
+      });
+    });
+
+    // Intersection Observer for reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Stat counter animation
+    const stats = document.querySelectorAll('.stat .num');
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const numEl = entry.target;
+          const target = parseInt(numEl.dataset.count);
+          const suffix = numEl.dataset.suffix || '';
+          let current = 0;
+          const increment = target / 100;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            numEl.textContent = Math.floor(current) + suffix;
+          }, 20);
+          statObserver.unobserve(numEl);
+        }
+      });
+  }, { threshold: 0.5 });
+
+    stats.forEach(stat => statObserver.observe(stat));
+
+    // Modal functionality for info boxes
+    document.querySelectorAll('.modal').forEach(modal => {
+      // Close modal when clicking outside the content area
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('open');
+        }
+      });
+    });
+
+    // Carousels
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const inner = carousel.querySelector('.carousel-inner');
+      const slides = carousel.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      const updateSlide = () => {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === currentIndex);
+        });
+        inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+      };
+
+      // Auto flip every 3 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide();
+      }, 3000);
+    });
+
+    // Parallax effect for hero
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      hero.style.setProperty('--parallax', scrolled * 0.5 + 'px');
+    });
+
+    // Form validation - Formspree handles submission automatically
+    const form = document.getElementById('contactForm');
+    const errorMsg = document.getElementById('errorMsg');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', (e) => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const privacy = document.getElementById('privacy').checked;
+
+      if (!name || !email || !message || !privacy) {
+        e.preventDefault();
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = !privacy ? 'Prosím, souhlasťe se zpracováním údajů.' : 'Prosím, vyplňte všechna povinná pole.';
+        return;
+      }
+
+      // Formspree handles the rest - form submits normally
+      errorMsg.style.display = 'none';
+    });
+
+    // Show success message after form submission
+    form.addEventListener('formspree.response', (e) => {
+      successMsg.style.display = 'block';
+      form.reset();
+    });
+
+    // Smooth FAQ dropdown (details/summary)
+    document.querySelectorAll('.faq-item').forEach((details) => {
+      const answer = details.querySelector('.faq-a');
+
+      const open = () => {
+        details.classList.add('animating');
+        details.setAttribute('open', '');
+        const h = answer.scrollHeight;
+        answer.style.setProperty('--faq-h', '0px');
+        requestAnimationFrame(() => {
+          answer.style.setProperty('--faq-h', h + 'px');
+          answer.style.opacity = '1';
+          answer.style.padding = '.9rem 1.1rem 1.1rem';
+          answer.style.borderTopColor = 'rgba(255,255,255,.08)';
+        });
+        answer.addEventListener('transitionend', function done(e){
+          if (e.propertyName === 'height') {
+            details.classList.remove('animating');
+            answer.removeEventListener('transitionend', done);
+          }
+        });
+      };
+
+      const close = () => {
+        details.classList.add('animating');
+        const h = answer.scrollHeight;
+        answer.style.setProperty('--faq-h', h + 'px');
+        requestAnimationFrame(() => {
+          answer.style.setProperty('--faq-h', '0px');
+          answer.style.opacity = '0';
+          answer.style.padding = '0 1.1rem';
+          answer.style.borderTopColor = 'transparent';
+        });
+        answer.addEventListener('transitionend', function done(e){
+          if (e.propertyName === 'height') {
+            details.removeAttribute('open');
+            details.classList.remove('animating');
+            answer.removeEventListener('transitionend', done);
+          }
+        });
+      };
+
+      details.querySelector('summary').addEventListener('click', (e) => {
+        e.preventDefault();
+        if (details.hasAttribute('open')) close(); else open();
+      });
+    });
+  </script>
+</body>
+</html>
+
